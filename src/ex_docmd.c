@@ -3211,7 +3211,8 @@ find_command(exarg_T *eap, int *full UNUSED)
 	/* Look for a user defined command as a last resort.  Let ":Print" be
 	 * overruled by a user defined command. */
 	if ((eap->cmdidx == CMD_SIZE || eap->cmdidx == CMD_Print)
-		&& *eap->cmd >= 'A' && *eap->cmd <= 'Z')
+		&& *eap->cmd >= 'A' && *eap->cmd <= 'Z'
+		|| *eap->cmd >= 'a' && *eap->cmd <= 'z')
 	{
 	    /* User defined commands may contain digits. */
 	    while (ASCII_ISALNUM(*p))
@@ -6270,11 +6271,11 @@ ex_command(exarg_T *eap)
     {
 	uc_list(name, end - name);
     }
-    else if (!ASCII_ISUPPER(*name))
-    {
-	EMSG(_("E183: User defined commands must start with an uppercase letter"));
-	return;
-    }
+//    else if (!ASCII_ISUPPER(*name))
+//    {
+//	EMSG(_("E183: User defined commands must start with an uppercase letter"));
+//	return;
+//    }
     else if ((name_len == 1 && *name == 'X')
 	  || (name_len <= 4
 		  && STRNCMP(name, "Next", name_len > 4 ? 4 : name_len) == 0))
