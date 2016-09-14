@@ -1183,7 +1183,7 @@ column is unmodified, thus it may not be on the first yanked character.
 There are ten types of registers:			*registers* *E354*
 1. The unnamed register ""
 2. 10 numbered registers "0 to "9
-3. The small delete register "-
+3. The small delete register "- Note: this is now linked to ""
 4. 26 named registers "a to "z or "A to "Z
 5. three read-only registers ":, "., "%
 6. alternate buffer register "#
@@ -1226,8 +1226,8 @@ contents of register 9.
 not exist}
 
 3. Small delete register "-				*quote_-* *quote-*
-This register contains text from commands that delete less than one line,
-except when the command specifies a register with ["x].
+This register might be used for something useful in the future. For now it is
+linked to the unnamed register, "".
 {not in Vi}
 
 4. Named registers "a to "z or "A to "Z			*quote_alpha* *quotea*
