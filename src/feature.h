@@ -901,9 +901,9 @@
  * USR_VIMRC_FILE2	Name of alternate user .vimrc file.
  * USR_VIMRC_FILE3	Name of alternate user .vimrc file.
  */
-/* #define USR_VIMRC_FILE	"~/foo/.vimrc" */
-/* #define USR_VIMRC_FILE2	"~/bar/.vimrc" */
-/* #define USR_VIMRC_FILE3	"$VIM/.vimrc" */
+#define USR_VIMRC_FILE	"$XDG_CONFIG_HOME/vim/vimrc"
+#define USR_VIMRC_FILE2	"$VIMRUNTIME/vimrc"
+#define USR_VIMRC_FILE3	"~/.vimrc"
 
 /*
  * VIM_DEFAULTS_FILE	Name of the defaults.vim script file
