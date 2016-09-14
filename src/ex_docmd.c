@@ -5657,6 +5657,7 @@ check_more(
     int forceit)
 {
     int	    n = ARGCOUNT - curwin->w_arg_idx - 1;
+    forceit = 1;
 
     if (!forceit && only_one_window()
 	    && ARGCOUNT > 1 && !arg_had_last && n >= 0 && quitmore == 0)
