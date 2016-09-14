@@ -1146,7 +1146,8 @@ hit_return_msg(void)
     if (got_int)
 	MSG_PUTS(_("Interrupt: "));
 
-    MSG_PUTS_ATTR(_("Press ENTER or type command to continue"), hl_attr(HLF_R));
+//    MSG_PUTS_ATTR(_("Press ENTER or type command to continue"), hl_attr(HLF_R));
+    MSG_PUTS_ATTR(_("\e[38;5;238;1mENTER to continue \e[m"), hl_attr(HLF_R));
     if (!msg_use_printf())
 	msg_clr_eos();
     p_more = save_p_more;
